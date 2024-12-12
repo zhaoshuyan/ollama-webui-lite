@@ -20,7 +20,7 @@ We are committed to maintaining this repository and progressively working throug
 
 Before proceeding with the installation, ensure that you have the following prerequisites:
 
-- Ollama (see [here](https://ollama.ai/)) running at http://localhost:11434/api. 
+- Ollama (see [here](https://ollama.ai/)) 
 - Node.js
 - npm
 
@@ -33,13 +33,24 @@ Follow these steps to set up Ollama-webui-lite:
    cd ollama-webui-lite
    ```
 
-2. Install the dependencies:
+2. Configure the environment:
+   
+   Create a `.env` file in the root directory:
+   ```bash
+   # Default configuration
+   VITE_OLLAMA_API_BASE_URL=http://localhost:11434/api
+   
+   # For remote API, replace with your server URL
+   # VITE_OLLAMA_API_BASE_URL=http://your-server-address:11434/api
+   ```
+
+3. Install the dependencies:
 
    ```bash
    npm ci
    ```
 
-3. Run the application in development mode:
+4. Run the application in development mode:
 
    ```bash
    npm run dev
